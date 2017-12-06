@@ -36,7 +36,7 @@ defmodule TilexWeb.AuthController do
     email = Map.get(info, :email)
     name = Developer.format_username(Map.get(info, :name))
 
-    case String.match?(email, ~r/@#{Application.get_env(:tilex, :hosted_domain)}$/) do
+    case String.match?(email, ~r/@zops-bok.herokuapp.com$/) do
       true ->
         attrs = %{
           email: email,
